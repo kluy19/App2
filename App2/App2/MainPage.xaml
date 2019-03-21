@@ -3,9 +3,37 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:App2"
              x:Class="App2.MainPage">
+    <StackLayout>
+        <Entry x:="Entry1" Placeholholder="Matrícula"/>
 
-	<Label Text="Welcome to Xamarin.Forms!" 
-           VerticalOptions="Center" 
-           HorizontalOptions="Center" />
+        <Entry x:="Entry2" Keyboard="Numeric" Placeholholder="Período"/>
+
+
+
+        <Picker x:Name="Picker" Title="Disciplina">
+            <Picker.Items>
+                <x:String>1 - Cálculo 1</x:String>
+                <x:String>2 - Introdução a Engenharia</x:String>
+                <x:String>3 - Cálculo 2</x:String>
+                <x:String>4 - Projetoda Engenharia</x:String>
+
+            </Picker.Items>
+
+
+        </Picker>
+        <Label x.Name="Label1" IsVisible="False"
+              Text="Matrícula realizada." TextColor="DarkGreen"/>
+        
+        <Label x.Name="Label2" IsVisible="False"
+              Text="Não foi posssível realizar a matrícula" TextColor="Red"/>
+
+        <Label x.Name="Button" Text="Matricular"
+              VerticalOptions="EndAndExpand"
+              HorizontalOptions="Center" 
+              Clicked="OnButtonClicked"/>
+
+
+    </StackLayout>
+
 
 </ContentPage>
